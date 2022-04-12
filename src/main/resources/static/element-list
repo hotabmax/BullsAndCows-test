@@ -1,0 +1,12 @@
+com.hotabmax.application
+com.hotabmax.application.controller
+com.hotabmax.application.filters
+com.hotabmax.application.filters.resultFilterAutorization
+com.hotabmax.application.interfacesServices
+com.hotabmax.application.models
+com.hotabmax.application.repositories
+com.hotabmax.application.servicesJPA
+com.hotabmax.services
+com.hotabmax.services.gameService
+com.hotabmax.services.gameService.gameServiceLogic
+com.hotabmax.services.gameService.resultsGameService

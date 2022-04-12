@@ -1,0 +1,68 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: hotabmax
+      changes:
+        - createTable:
+            tableName: userdata
+            columns:
+              - column:
+                  name: id
+                  type: serial
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: login
+                  type: varchar
+              - column:
+                  name: password
+                  type: varchar
+        - createTable:
+            tableName: historyofattempts
+            columns:
+              - column:
+                  name: id
+                  type: serial
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: login
+                  type: varchar
+              - column:
+                  name: value
+                  type: integer
+              - column:
+                  name: bulls
+                  type: integer
+              - column:
+                  name: cows
+                  type: integer
+        - createTable:
+            tableName: progress
+            columns:
+              - column:
+                  name: id
+                  type: serial
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: login
+                  type: varchar
+              - column:
+                  name: attempts
+                  type: integer
+              - column:
+                  name: success
+                  type: integer
+              - column:
+                  name: middleattempts
+                  type: float
+        - addUniqueConstraint:
+            tableName: userdata
+            columnNames: login
+        - addUniqueConstraint:
+            tableName: progress
+            columnNames: login
