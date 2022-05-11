@@ -31,7 +31,7 @@ databaseChangeLog:
                   name: login
                   type: varchar
               - column:
-                  name: value
+                  name: namber
                   type: integer
               - column:
                   name: bulls

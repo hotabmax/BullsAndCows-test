@@ -23,7 +23,7 @@ export function TableHistory(){
             <TableBody>
                 {tableHistoryData.map((data) => (
                     <TableRow>
-                        <TableCell>{data.value}</TableCell>
+                        <TableCell>{data.namber}</TableCell>
                         <TableCell>{data.bulls}Б{data.cows}К</TableCell>
                     </TableRow>
                 ))}

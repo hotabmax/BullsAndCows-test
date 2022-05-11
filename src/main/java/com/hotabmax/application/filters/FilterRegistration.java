@@ -33,7 +33,7 @@ public class FilterRegistration {
         Cookie cookieResult = null;
         if(cookies == null) {
             if(!baosLogin.toString().equals("") && !baosPassword.toString().equals("")){
-                if (userService.findByLogin(baosLogin.toString()).size() != 0) {
+                if (userService.findByLogin(baosLogin.toString()).size() == 0) {
                     userService.create(new User(
                             baosLogin.toString(),
                             baosPassword.toString()

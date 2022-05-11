@@ -39,8 +39,8 @@ class CreatorHistoryRecordAndTryChangeRandomValueTest {
                             .createHistoryAndRecord("Тест", 1234, 0, 4);
 
             for(int i = 0; i < historyOfAttemptsService.findByLogin("Тест").size(); i++){
-                if(historyOfAttemptsService.findByLogin("Тест").get(i).getValue() == 1234){
-                    assertEquals(1234, historyOfAttemptsService.findByLogin("Тест").get(i).getValue());
+                if(historyOfAttemptsService.findByLogin("Тест").get(i).getNamber() == 1234){
+                    assertEquals(1234, historyOfAttemptsService.findByLogin("Тест").get(i).getNamber());
                 }
             }
             historyOfAttemptsService.deleteByLogin("Тест");
@@ -110,7 +110,7 @@ class CreatorHistoryRecordAndTryChangeRandomValueTest {
                     .createHistoryAndRecord("Тест", 1234, 4, 0);
             for(int i = 0; i < historyOfAttemptsService.findByLogin("Тест").size(); i++){
                 if(historyOfAttemptsService.findByLogin("Тест").get(i).getBulls() == 4){
-                    assertEquals(1234, historyOfAttemptsService.findByLogin("Тест").get(i).getValue());
+                    assertEquals(1234, historyOfAttemptsService.findByLogin("Тест").get(i).getNamber());
                 }
             }
             historyOfAttemptsService.deleteByLogin("Тест");

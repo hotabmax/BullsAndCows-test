@@ -11,7 +11,7 @@ public class HistoryOfAttempts {
     @Column
     private String login;
     @Column
-    private Integer value;
+    private Integer namber;
     @Column
     private Integer bulls;
     @Column
@@ -19,9 +19,9 @@ public class HistoryOfAttempts {
     public HistoryOfAttempts() {
     }
 
-    public HistoryOfAttempts(String login, Integer value, Integer bulls, Integer cows) {
+    public HistoryOfAttempts(String login, Integer namber, Integer bulls, Integer cows) {
         this.login = login;
-        this.value = value;
+        this.namber = namber;
         this.bulls = bulls;
         this.cows = cows;
     }
@@ -34,12 +34,12 @@ public class HistoryOfAttempts {
         this.login = login;
     }
 
-    public int getValue() {
-        return value;
+    public int getNamber() {
+        return namber;
     }
 
-    public void setValue(int value) {
-        this.value = value;
+    public void setNamber(int namber) {
+        this.namber = namber;
     }
 
     public int getBulls() {

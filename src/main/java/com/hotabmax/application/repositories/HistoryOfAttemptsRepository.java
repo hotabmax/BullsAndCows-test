@@ -11,7 +11,7 @@ import java.util.List;
 
 @Component
 public interface HistoryOfAttemptsRepository extends JpaRepository<HistoryOfAttempts, Long> {
-    @Query(value = "select id, login, value, bulls, cows from historyofattempts where login = :login",
+    @Query(value = "select id, login, namber, bulls, cows from historyofattempts where login = :login",
             nativeQuery = true)
     List<HistoryOfAttempts> findByLogin(String login);
 
